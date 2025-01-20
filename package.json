@@ -18,7 +18,8 @@
     "react-dom": "18.3.1",
     "react-native": "0.76.6",
     "react-native-web": "~0.19.13",
-    "@expo/vector-icons": "^14.0.2"
+    "@expo/vector-icons": "^14.0.2",
+    "expo-image-picker": "~16.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
