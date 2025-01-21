@@ -21,7 +21,9 @@
     "@expo/vector-icons": "^14.0.2",
     "expo-image-picker": "~16.0.4",
     "react-native-gesture-handler": "~2.20.2",
-    "react-native-reanimated": "~3.16.1"
+    "react-native-reanimated": "~3.16.1",
+    "react-native-view-shot": "~4.0.3",
+    "expo-media-library": "~17.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
