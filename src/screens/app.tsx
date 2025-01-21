@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, type ImageSourcePropType } from "react-native";
 import { type FC, useState } from "react";
 import * as ImagePicker from "expo-image-picker";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { ImageViewer } from "../components/image-viewer";
 import { Button } from "../components/button";
@@ -54,7 +55,7 @@ export const App: FC = () => {
 	};
 
 	return (
-		<View style={styles.container}>
+		<GestureHandlerRootView style={styles.container}>
 			<View style={styles.imageContainer}>
 				<ImageViewer
 					placeholderImageSource={PlaceholderImage}
@@ -93,7 +94,7 @@ export const App: FC = () => {
 				</View>
 			)}
 			<StatusBar style="auto" />
-		</View>
+		</GestureHandlerRootView>
 	);
 };
 
