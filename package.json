@@ -19,7 +19,9 @@
     "react-native": "0.76.6",
     "react-native-web": "~0.19.13",
     "@expo/vector-icons": "^14.0.2",
-    "expo-image-picker": "~16.0.4"
+    "expo-image-picker": "~16.0.4",
+    "react-native-gesture-handler": "~2.20.2",
+    "react-native-reanimated": "~3.16.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
