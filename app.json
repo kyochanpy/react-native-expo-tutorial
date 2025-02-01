@@ -1,28 +1,30 @@
 {
-  "expo": {
-    "name": "react-native-expo-tutorial",
-    "slug": "react-native-expo-tutorial",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./src/assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./src/assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./src/assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "favicon": "./src/assets/favicon.png"
-    }
-  }
+	"expo": {
+		"name": "react-native-expo-tutorial",
+		"slug": "react-native-expo-tutorial",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./src/assets/icon.png",
+		"userInterfaceStyle": "light",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./src/assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#25292e",
+			"hideExponentSplashScreen": false,
+			"splashScreenDelay": 5000
+		},
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./src/assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			}
+		},
+		"web": {
+			"favicon": "./src/assets/favicon.png"
+		}
+	}
 }

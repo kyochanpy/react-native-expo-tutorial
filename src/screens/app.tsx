@@ -1,12 +1,12 @@
 import { registerRootComponent } from "expo";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, type ImageSourcePropType } from "react-native";
-import { type FC, useState, useRef } from "react";
+import { type FC, useState, useRef, useEffect } from "react";
 import * as ImagePicker from "expo-image-picker";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as MediaLibrary from "expo-media-library";
 import { captureRef } from "react-native-view-shot";
-
+import * as SplashScreen from "expo-splash-screen";
 import { ImageViewer } from "../components/image-viewer";
 import { Button } from "../components/button";
 import { IconButton } from "../components/icon-button";
@@ -17,7 +17,18 @@ import { EmojiSticker } from "../components/emoji-sticker";
 const PlaceholderImage =
 	require("../assets/images/background-image.png") as ImageSourcePropType;
 
+SplashScreen.preventAutoHideAsync();
+
 export const App: FC = () => {
+	useEffect(() => {
+		// 5秒後にスプラッシュスクリーンを非表示にする
+		const hideSplash = setTimeout(async () => {
+			await SplashScreen.hideAsync();
+		}, 5000);
+
+		// クリーンアップ関数
+		return () => clearTimeout(hideSplash);
+	}, []);
 	const [selectedImage, setSelectedImage] = useState<string | null>(null);
 	const [showAppOptions, setShowAppOptions] = useState<boolean>(false);
 	const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
@@ -115,7 +126,7 @@ export const App: FC = () => {
 					/>
 				</View>
 			)}
-			<StatusBar style="auto" />
+			<StatusBar style="light" />
 		</GestureHandlerRootView>
 	);
 };
